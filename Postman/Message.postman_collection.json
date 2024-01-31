@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "eea6d84b-79e8-4c7c-beb2-aa3d929043da",
+		"name": "Message",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32634099"
+	},
+	"item": [
+		{
+			"name": "SendMessage",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2IiwidHlwIjoiSldUIn0.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBlbWFpbC5ydSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluaXN0cmF0b3IiLCJVc2VySWQiOiI5ZTljZTBhZS01OGU4LTRhZDUtODc1Ni02MjcwMGYxZWQzNDAiLCJleHAiOjE3MDY2ODY0MjksImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcwMTMiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MDEzIn0.bCMjS0SQIcVhuysejUKEXX70RwHe7Gsjtky12y0_tXnf97amSuzt4uGvqueV8SSLKVGVWNw6UIp0-zZAqmzgoBGZWIYe0TI3j75AOCVfT2Ce8vA0MNpZiomM-A-xEUcKyqcIQqMNZB2Cj1ShZf0RIQiho7nMUghFPsIYNRPi23D2QuZvB7MSTl2PFlNueLc43_RXEpMvc5FzGBT4kK31RFn4xzk4AMnjF6ZRUNBtE3Hh-ktKdB80BVWzXyYPRW_ERGibRgAA179hUkaHVf23VnAXMa0rBFdIaPaJK3ADASpDW0Ou94kbIkAWDxEMkutuYk2-vSxgoHM_s4IfYbA3iw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5099/Message/SendMsg?recipientEmail=user1@email.ru&text=Привет",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5099",
+					"path": [
+						"Message",
+						"SendMsg"
+					],
+					"query": [
+						{
+							"key": "recipientEmail",
+							"value": "user1@email.ru"
+						},
+						{
+							"key": "text",
+							"value": "Привет"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMessage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5099/Message/GetMsg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5099",
+					"path": [
+						"Message",
+						"GetMsg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
