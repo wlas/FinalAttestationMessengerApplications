@@ -33,8 +33,8 @@ namespace LibraryApiMessenger.Domain
 			modelBuilder.Entity<Message>(e =>
 			{
 				e.HasKey(x => x.Id);
-				e.HasIndex(x => x.SenderEmail).IsUnique();
-				e.HasIndex(x => x.RecipientEmail).IsUnique();
+				e.HasIndex(x => x.SenderEmail);
+				e.HasIndex(x => x.RecipientEmail);
 
 				e.Property(e => e.TextMessage)
 					.HasMaxLength(500);

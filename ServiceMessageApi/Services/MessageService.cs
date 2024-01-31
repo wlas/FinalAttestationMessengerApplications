@@ -41,9 +41,15 @@ namespace ServiceMessageApi.Services
 			var messageList = new List<MessageModel>();
 			using (_context)
 			{
-				var messge = _mapper.Map<Message>(model);
-				
-				_context.Messages.Add(messge);
+				var message = new Message()
+				{
+					SenderEmail = _context.Users.Single(x => x.Email == model.SenderEmail).Id,
+					RecipientEmail = _context.Users.Single(x => x.Email == model.RecipientEmail).Id,
+					CreatedDate = DateTime.UtcNow,
+					IsRead = false,
+					TextMessage = model.TextMessage,
+				};
+				_context.Messages.Add(message);
 				_context.SaveChanges();
 
 				messageList.Add(model);

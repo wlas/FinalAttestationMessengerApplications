@@ -14,7 +14,7 @@ namespace ServiceMessageApi.Mapper
 				CreatedDate = source.CreatedDate,
 				IsRead = source.IsRead,
 				RecipientEmail = source.Recipient.Email,
-				SenderEmail = source.Sender.Email,
+				SenderEmail = source.Recipient.Email,
 				TextMessage = source.TextMessage
 
 			};
