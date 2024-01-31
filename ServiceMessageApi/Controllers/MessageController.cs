@@ -20,7 +20,7 @@ namespace ServiceMessageApi.Controllers
 			_messageService = messageService;
 		}
 
-		[Authorize(Roles = "Administrator")]
+		[Authorize]
 		[HttpGet("GetMsg")]
 		public IActionResult GetNewMessage()
 		{
@@ -29,7 +29,7 @@ namespace ServiceMessageApi.Controllers
 			var response = _messageService.GetMessages(senderEmail);
 			return Ok(response);
 		}
-		[Authorize(Roles = "Administrator")]
+		[Authorize]
 		[HttpPost("SendMsg")]
 		public IActionResult SendMessage(string recipientEmail, string text)
 		{			
